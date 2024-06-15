@@ -49,3 +49,10 @@ const LearnerSubmissions = [
     // Add more learners if needed
 ];
 
+function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
+    // Validate CourseInfo and AssignmentGroup
+    if (AssignmentGroup.course_id !== CourseInfo.id) {
+        throw new Error('AssignmentGroup does not belong to the specified CourseInfo');
+    }
+
+  
